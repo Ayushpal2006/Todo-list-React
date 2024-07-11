@@ -81,28 +81,11 @@ function App() {
           {tasks.map((task, index) => (
             <li key={index}>
               <span>{task}</span>
-              <button
-                onClick={() => {
-                  handleDelete(index);
-                }}
-              >
-                Delete
-              </button>
+              <button onClick={() => {handleDelete(index);}}>Delete</button>
 
-              <button
-                onClick={() => {
-                  moveUp(index);
-                }}
-              >
-                👍
-              </button>
-              <button
-                onClick={() => {
-                  moveDown(index);
-                }}
-              >
-                👎
-              </button>
+              <button onClick={() => {moveUp(index);}}>👍</button>
+              
+              <button onClick={() => {moveDown(index);}}>👎</button>
             </li>
           ))}
         </ul>
